@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text = ""
+
     var body: some View {
         VStack {
             NavigationView {
@@ -15,59 +17,87 @@ struct ContentView: View {
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.red)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("red"))
                         
-                        Text("Gratitude")
-                            .foregroundColor(.white)
+                        
+                        TextField("I'm grateful for...",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
                             .font(.title)
+                            .bold()
+
                     }
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.orange)
-                        Text("Caring")
-                            .foregroundColor(.white)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("orange"))
+                        
+                        TextField("I care for...",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)                            .foregroundColor(.white)
                             .font(.title)
+                            .bold()
+
                         
                     }
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.yellow)
-                        Text("Self confidence")
-                            .foregroundColor(.white)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("yellow"))
+                        
+                        TextField("I'm confident about my...",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)                            .foregroundColor(.white)
                             .font(.title)
+                            .bold()
+
                     }
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.green)
-                        Text("Affirmations")
-                            .foregroundColor(.white)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("green"))
+                        
+                        TextField("today's affirmation: ..",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)                            .foregroundColor(.white)
                             .font(.title)
+                            .bold()
+
                     }
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.blue)
-                        Text("healthy relationships")
-                            .foregroundColor(.white)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("blue"))
+                        
+                        TextField("I need to spend time with..",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)                            .foregroundColor(.white)
                             .font(.title)
+                            .bold()
+
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.purple)
-                        Text("self tolerance")
-                            .foregroundColor(.white)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("purple"))
+                        
+                        TextField("I'm kind to myself through..",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)                            .foregroundColor(.white)
                             .font(.title)
+                            .bold()
+
                     }
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 20.0 )
-                            .frame (width: 360, height: 110) .foregroundColor (Color.pink)
-                        Text("self appretiation")
-                            .foregroundColor(.white)
+                            .frame (width: 360, height: 110) .foregroundColor (Color("pink"))
+                        
+                        TextField("I love ___ about myself",text: $text)
+                                                .foregroundColor(.white)
+                            .multilineTextAlignment(.center)                            .foregroundColor(.white)
                             .font(.title)
+                            .bold()
+
                     }
                     
                 }
